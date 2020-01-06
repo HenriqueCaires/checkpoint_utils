@@ -6,7 +6,11 @@ DAYS="${DAYS:-7}"
 DATE=$(date -d "-$DAYS day" +"%Y-%m-%d")
 
 clear_logs () {
-    rm -rf $FWDIR/log/${DATE}_*.log*
+    rm -f $FWDIR/log/${DATE}_*.log*
+}
+
+clear_indexes () {
+    rm -rf $RTDIR/log_indexes/*${DATE}*
 }
 
 if type "mdsstat" > /dev/null; then
@@ -20,3 +24,5 @@ if type "mdsstat" > /dev/null; then
 else
     clear_logs
 fi
+
+clear_indexes
