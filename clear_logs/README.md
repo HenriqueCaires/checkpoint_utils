@@ -1,6 +1,6 @@
 # Clear logs
 
-## Clear logs from 1 day ago
+Clear logs from 1 day ago
 
     ./clear_logs 1
 
